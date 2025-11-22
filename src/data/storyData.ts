@@ -12,7 +12,7 @@ export interface Character {
 export interface StoryPhase {
   id: number;
   title: string;
-  backgroundColor: string;
+  backgroundImage: string;
   characters: Character[];
   dialogSteps: DialogStep[];
 }
@@ -26,7 +26,7 @@ export const storyData: StoryData = {
     {
       id: 1,
       title: "첫 만남",
-      backgroundColor: "bg-amber-100",
+      backgroundImage: "/images/bg-first-meeting.jpg",
       characters: [
         { name: "조자룡", image: "/images/zhao_yun_young.png", position: "left" },
         { name: "유비", image: "/images/liu_bei_young.png", position: "right" },
@@ -52,7 +52,7 @@ export const storyData: StoryData = {
     {
       id: 2,
       title: "헤어짐과 재회의 기다림",
-      backgroundColor: "bg-blue-900",
+      backgroundImage: "/images/bg-waiting.jpg",
       characters: [
         { name: "조자룡", image: "/images/zhao_yun_general.png", position: "left" },
       ],
@@ -67,7 +67,7 @@ export const storyData: StoryData = {
     {
       id: 3,
       title: "재회",
-      backgroundColor: "bg-yellow-100",
+      backgroundImage: "/images/bg-reunion.jpg",
       characters: [
         { name: "조자룡", image: "/images/zhao_yun_loyal.png", position: "left" },
         { name: "유비", image: "/images/liu_bei_reunion.png", position: "right" },
@@ -93,7 +93,7 @@ export const storyData: StoryData = {
     {
       id: 4,
       title: "장판파 칠진칠출",
-      backgroundColor: "bg-red-200",
+      backgroundImage: "/images/bg-battle.jpg",
       characters: [
         { name: "조자룡", image: "/images/zhao_yun_loyal.png", position: "left" },
         { name: "유비", image: "/images/liu_bei_reunion.png", position: "center" },
@@ -128,7 +128,7 @@ export const storyData: StoryData = {
     {
       id: 5,
       title: "무력 수준",
-      backgroundColor: "bg-gray-900",
+      backgroundImage: "/images/bg-strength.jpg",
       characters: [
         { name: "조자룡", image: "/images/zhao_yun_general.png", position: "left" },
       ],
@@ -150,7 +150,7 @@ export const storyData: StoryData = {
     {
       id: 6,
       title: "마지막",
-      backgroundColor: "bg-purple-900",
+      backgroundImage: "/images/bg-end.jpg",
       characters: [
         { name: "조자룡", image: "/images/zhao_yun_elder.png", position: "left" },
         { name: "제갈공명", image: "/images/zhuge_liang_elder.png", position: "right" },

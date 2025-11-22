@@ -71,7 +71,8 @@ export function StoryPlayer() {
 
   return (
     <div
-      className={`w-screen h-screen ${currentPhase.backgroundColor} transition-colors duration-500 flex flex-col justify-between p-4 md:p-8 overflow-hidden`}
+      className="w-screen h-screen bg-cover bg-center transition-all duration-500 flex flex-col justify-between p-4 md:p-8 overflow-hidden"
+      style={{ backgroundImage: `url(${currentPhase.backgroundImage})` }}
     >
       {/* 캐릭터 표시 */}
       <div className="flex-1 flex items-center justify-center overflow-hidden">
