@@ -24,10 +24,10 @@ export function Controls({
   const isLastPhase = phaseIndex === totalPhases - 1;
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4 md:gap-6">
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-white mb-2">{phaseTitle}</h2>
-        <p className="text-sm text-gray-300">
+        <h2 className="text-xl md:text-2xl font-bold text-white mb-2">{phaseTitle}</h2>
+        <p className="text-xs md:text-sm text-gray-300">
           페이즈 {phaseIndex + 1}/{totalPhases}
         </p>
         <p className="text-xs text-gray-400 mt-1">
@@ -35,12 +35,12 @@ export function Controls({
         </p>
       </div>
 
-      <div className="flex justify-between items-center gap-4">
+      <div className="flex justify-between items-center gap-2 md:gap-4">
         <Button
           onClick={onPrev}
           disabled={isFirstPhase && dialogIndex === 0}
           variant="outline"
-          className="min-w-32"
+          className="min-w-24 md:min-w-32 text-xs md:text-sm"
         >
           ← 이전
         </Button>
@@ -58,7 +58,7 @@ export function Controls({
           onClick={onNext}
           disabled={isLastPhase && isLastDialog}
           variant="default"
-          className="min-w-32"
+          className="min-w-24 md:min-w-32 text-xs md:text-sm"
         >
           다음 →
         </Button>

@@ -10,7 +10,7 @@ interface CharacterDisplayProps {
 
 export function CharacterDisplay({ characters }: CharacterDisplayProps) {
   return (
-    <div className="flex justify-between items-end min-h-96">
+    <div className="flex justify-between items-end h-full min-h-64 md:min-h-96">
       {characters.map((character) => {
         const isLeft = character.position === "left";
         return (
@@ -34,7 +34,7 @@ export function CharacterDisplay({ characters }: CharacterDisplayProps) {
             }}
             className={isLeft ? "w-1/3" : "w-1/3"}
           >
-            <div className="relative w-full h-96 flex items-center justify-center">
+            <div className="relative w-full h-64 md:h-96 flex items-center justify-center">
               <Image
                 src={character.image}
                 alt={character.name}

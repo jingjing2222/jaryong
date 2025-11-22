@@ -35,23 +35,23 @@ export function StoryPlayer() {
 
   return (
     <div
-      className={`min-h-screen w-full ${currentPhase.backgroundColor} transition-colors duration-500 flex flex-col justify-between p-8`}
+      className={`w-screen h-screen ${currentPhase.backgroundColor} transition-colors duration-500 flex flex-col justify-between p-4 md:p-8 overflow-hidden`}
     >
       {/* 캐릭터 표시 */}
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-center overflow-hidden">
         <div className="w-full">
           <CharacterDisplay characters={currentPhase.characters} />
         </div>
       </div>
 
-      {/* 대사창 */}
-      <div className="flex-1 flex flex-col justify-end gap-8">
-        <div className="max-w-2xl mx-auto w-full">
+      {/* 대사창 및 컨트롤 */}
+      <div className="flex-1 flex flex-col justify-end gap-4 md:gap-8 pb-4 md:pb-0">
+        <div className="max-w-2xl mx-auto w-full px-2 md:px-0">
           <DialogBox speaker={currentDialog.speaker} text={currentDialog.text} />
         </div>
 
         {/* 컨트롤 */}
-        <div className="max-w-2xl mx-auto w-full">
+        <div className="max-w-2xl mx-auto w-full px-2 md:px-0">
           <Controls
             onNext={handleNext}
             onPrev={handlePrev}
