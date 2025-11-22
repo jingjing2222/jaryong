@@ -1,0 +1,18 @@
+export const allImageUrls = [
+  "/images/bg-battle.jpg",
+  "/images/bg-end.jpg",
+  "/images/bg-first-meeting.jpg",
+  "/images/bg-reunion.jpg",
+  "/images/bg-strength.jpg",
+  "/images/bg-waiting.jpg",
+  "/images/lady_xiahou_danger.png",
+  "/images/lady_xiahou_rescued.png",
+  "/images/liu_bei_reunion.png",
+  "/images/liu_bei_young.png",
+  "/images/zhao_yun_elder.png",
+  "/images/zhao_yun_general.png",
+  "/images/zhao_yun_loyal.png",
+  "/images/zhao_yun_young.png",
+  "/images/zhuge_liang_elder.png",
+  "/images/zhuge_liang_young.png",
+];
