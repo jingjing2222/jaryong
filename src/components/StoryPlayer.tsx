@@ -7,8 +7,9 @@ import { DialogBox } from "./DialogBox";
 import { Controls } from "./Controls";
 import { IntroPage } from "./IntroPage";
 import { CharacterInfoPage } from "./CharacterInfoPage";
+import { CastFormPage } from "./CastFormPage";
 
-type PageState = "intro" | "info" | "story";
+type PageState = "intro" | "info" | "cast" | "story";
 
 export function StoryPlayer() {
   const [currentPage, setCurrentPage] = useState<PageState>("intro");
@@ -61,7 +62,11 @@ export function StoryPlayer() {
   }
 
   if (currentPage === "info") {
-    return <CharacterInfoPage onNext={() => setCurrentPage("story")} />;
+    return <CharacterInfoPage onNext={() => setCurrentPage("cast")} />;
+  }
+
+  if (currentPage === "cast") {
+    return <CastFormPage onComplete={() => setCurrentPage("story")} />;
   }
 
   return (
@@ -81,7 +86,7 @@ export function StoryPlayer() {
       {/* 대사창 및 컨트롤 */}
       <div className="flex-1 flex flex-col justify-end gap-4 md:gap-8 pb-4 md:pb-0">
         <div className="max-w-2xl mx-auto w-full px-2 md:px-0">
-          <DialogBox speaker={currentDialog.speaker} text={currentDialog.text} />
+          <DialogBox speaker={currentDialog.speaker} text={currentDialog.text} phaseId={currentPhase.id} />
         </div>
 
         {/* 컨트롤 */}
