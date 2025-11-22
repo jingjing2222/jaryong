@@ -5,8 +5,10 @@ import { storyData } from "@/data/storyData";
 import { CharacterDisplay } from "./CharacterDisplay";
 import { DialogBox } from "./DialogBox";
 import { Controls } from "./Controls";
+import { IntroPage } from "./IntroPage";
 
 export function StoryPlayer() {
+  const [showIntro, setShowIntro] = useState(true);
   const [phaseIndex, setPhaseIndex] = useState(0);
   const [dialogIndex, setDialogIndex] = useState(0);
 
@@ -36,6 +38,8 @@ export function StoryPlayer() {
   // 키보드 이벤트 처리
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (showIntro) return;
+
       if (e.key === "ArrowRight" || e.key === " ") {
         e.preventDefault();
         handleNext();
@@ -47,7 +51,11 @@ export function StoryPlayer() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [phaseIndex, dialogIndex]);
+  }, [phaseIndex, dialogIndex, showIntro]);
+
+  if (showIntro) {
+    return <IntroPage onStart={() => setShowIntro(false)} />;
+  }
 
   return (
     <div
