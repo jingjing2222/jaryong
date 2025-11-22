@@ -96,7 +96,7 @@ export function CastFormPage({ onComplete }: CastFormPageProps) {
         <div className="sticky bottom-0 bg-gradient-to-t from-black via-black to-transparent pt-8 pb-4">
           <Button
             onClick={handleComplete}
-            className="w-full max-w-md mx-auto block px-8 py-4 text-lg bg-amber-600 hover:bg-amber-700 text-white rounded-lg"
+            className="w-full max-w-md mx-auto flex justify-center px-8 py-4 text-lg bg-amber-600 hover:bg-amber-700 text-white rounded-lg"
           >
             완료
           </Button>
