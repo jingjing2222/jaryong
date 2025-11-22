@@ -72,7 +72,7 @@ export const storyData: StoryData = {
       title: "아내와 아들 구출",
       backgroundColor: "bg-red-200",
       characters: [
-        { name: "조자룡", image: "/images/zhao_yun_rescue.png", position: "left" },
+        { name: "조자룡", image: "/images/zhao_yun_loyal.png", position: "left" },
         { name: "미부인", image: "/images/lady_xiahou_rescued.png", position: "right" },
       ],
       dialogSteps: [
@@ -92,7 +92,7 @@ export const storyData: StoryData = {
       title: "무력 수준",
       backgroundColor: "bg-gray-900",
       characters: [
-        { name: "조자룡", image: "/images/zhao_yun_powerful.png", position: "left" },
+        { name: "조자룡", image: "/images/zhao_yun_general.png", position: "left" },
       ],
       dialogSteps: [
         { speaker: "나레이션", text: "조자룡의 무력은 시대를 뛰어넘었다. 그의 푸른 창 한 자루가 휩쓸면 백 명의 적군이 무너졌고, 그 말 위의 몸은 수천 명의 화살을 모두 피해냈다." },
