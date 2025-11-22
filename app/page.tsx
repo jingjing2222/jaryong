@@ -1,4 +1,4 @@
-import { StoryPlayer } from "@/src/components/StoryPlayer";
+import { StoryPlayer } from "@/components/StoryPlayer";
 
 export default function Home() {
   return (
