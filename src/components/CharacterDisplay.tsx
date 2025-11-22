@@ -6,13 +6,16 @@ import { Character } from "@/data/storyData";
 
 interface CharacterDisplayProps {
   characters: Character[];
+  currentSpeaker?: string;
 }
 
-export function CharacterDisplay({ characters }: CharacterDisplayProps) {
+export function CharacterDisplay({ characters, currentSpeaker }: CharacterDisplayProps) {
   return (
     <div className="flex justify-between items-end h-full min-h-64 md:min-h-96">
       {characters.map((character) => {
         const isLeft = character.position === "left";
+        const isSpeaking = currentSpeaker === character.name;
+
         return (
           <motion.div
             key={character.name}
@@ -21,15 +24,16 @@ export function CharacterDisplay({ characters }: CharacterDisplayProps) {
               x: isLeft ? -50 : 50,
             }}
             animate={{
-              opacity: 1,
+              opacity: isSpeaking ? 1 : 0.5,
               x: 0,
+              scale: isSpeaking ? 1.1 : 0.9,
             }}
             exit={{
               opacity: 0,
               x: isLeft ? -50 : 50,
             }}
             transition={{
-              duration: 0.5,
+              duration: 0.4,
               ease: "easeInOut",
             }}
             className={isLeft ? "w-1/3" : "w-1/3"}

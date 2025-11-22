@@ -56,7 +56,10 @@ export function StoryPlayer() {
       {/* 캐릭터 표시 */}
       <div className="flex-1 flex items-center justify-center overflow-hidden">
         <div className="w-full">
-          <CharacterDisplay characters={currentPhase.characters} />
+          <CharacterDisplay
+            characters={currentPhase.characters}
+            currentSpeaker={currentDialog.speaker}
+          />
         </div>
       </div>
 
