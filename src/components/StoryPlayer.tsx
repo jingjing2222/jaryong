@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { storyData } from "@/data/storyData";
 import { CharacterDisplay } from "./CharacterDisplay";
 import { DialogBox } from "./DialogBox";
@@ -32,6 +32,22 @@ export function StoryPlayer() {
       setDialogIndex(storyData.phases[phaseIndex - 1].dialogSteps.length - 1);
     }
   };
+
+  // 키보드 이벤트 처리
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight" || e.key === " ") {
+        e.preventDefault();
+        handleNext();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        handlePrev();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [phaseIndex, dialogIndex]);
 
   return (
     <div
