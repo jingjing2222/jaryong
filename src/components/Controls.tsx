@@ -24,13 +24,13 @@ export function Controls({
   const isLastPhase = phaseIndex === totalPhases - 1;
 
   return (
-    <div className="flex flex-col gap-4 md:gap-6">
+    <div className="flex flex-col gap-6 md:gap-8">
       <div className="text-center">
-        <h2 className="text-xl md:text-2xl font-bold text-white mb-2">{phaseTitle}</h2>
-        <p className="text-xs md:text-sm text-gray-300">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">{phaseTitle}</h2>
+        <p className="text-base md:text-lg text-gray-300">
           페이즈 {phaseIndex + 1}/{totalPhases}
         </p>
-        <p className="text-xs text-gray-400 mt-1">
+        <p className="text-sm md:text-base text-gray-400 mt-2">
           대사 {dialogIndex + 1}/{totalDialogs}
         </p>
       </div>
