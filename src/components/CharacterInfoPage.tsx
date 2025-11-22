@@ -93,6 +93,22 @@ export function CharacterInfoPage({ onNext }: CharacterInfoPageProps) {
               다른 장수들의 비참한 최후와 달리 의로움 속에서 눈을 감았다.
             </p>
           </div>
+
+          <div className="bg-amber-900/30 rounded-lg p-5 border border-amber-600">
+            <h3 className="text-amber-300 font-bold mb-2">✨ 역사 속의 조자룡</h3>
+            <p className="text-lg leading-relaxed">
+              삼국지 정사에는 그의 기록이 짧지만,
+              나올 때마다 엄청난 임팩트를 남겼다.
+            </p>
+            <p className="text-base text-amber-200 mt-3 leading-relaxed">
+              • 당양현 장판: 수천의 적군 속에서 홀로 아내와 아들을 구해낸 영웅
+              <br />• 일생: 유비를 만난 그 순간부터 죽음까지 흔들리지 않은 모습
+              <br />• 최후: 다른 장수들의 비참한 끝과 달리 의로움 속에서 영광스럽게 마감
+            </p>
+            <p className="text-base text-amber-100 mt-4 italic">
+              "적게 나타나지만, 나타날 때마다 역사를 바꾸는 인물"
+            </p>
+          </div>
         </motion.div>
 
         {/* 명언 */}
