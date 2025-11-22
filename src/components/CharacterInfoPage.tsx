@@ -34,13 +34,13 @@ export function CharacterInfoPage({ onNext }: CharacterInfoPageProps) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
-      className="w-screen h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-black flex items-center justify-center p-8"
+      className="w-screen h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-black overflow-y-auto flex items-center justify-center p-8"
     >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-3xl space-y-6"
+        className="max-w-3xl space-y-6 py-8"
       >
         {/* 제목 */}
         <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-bold text-amber-300 text-center">
